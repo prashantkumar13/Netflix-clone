@@ -1,4 +1,5 @@
 const api_key = "81c7dfc7bdbd2af0f7b663f9a20fcd53";
+// const api_key = "5a89029c4014c62b4600138c1b72bcbc";
 const apiEndPoint = "https://api.themoviedb.org/3";
 const imgPath = "https://image.tmdb.org/t/p/w500";
 
