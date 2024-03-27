@@ -52,7 +52,7 @@ function fetchAndBuildAllSection(){
     .then(Response => { 
         const Categories = Response.genres;
         if (Array.isArray(Categories) && Categories.length){
-            Categories.slice(0,2).forEach(Category => {
+            Categories.forEach(Category => {
                 fetchAndBuildMovieSection(
                     apiPath.fetchMoviesList(Category.id),
                     Category.name);
