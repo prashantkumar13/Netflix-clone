@@ -1,0 +1,223 @@
+/*normalise css */
+
+body {
+    background-color: #141414;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica , Arial , sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1242px;
+    margin: 0 auto;
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+header{
+    background-color: transparent;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: all ease 500ms;
+}
+
+header.black-bg{
+    background-color: rgb(20,20,20);
+}
+
+.header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.left-cont, .right-cont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-main{
+    color: red;
+    max-width:100px;
+    background-color:transparent;
+}
+
+.main-nav{
+    list-style: none;
+    display: inline-flex;
+    flex-direction: row;
+    /* display: none; */
+}
+
+.nav-item{
+    color: #e5e5e5;
+    margin-right: 20px;
+    cursor: pointer;
+    
+}
+
+.nav-item-active{
+    color: white;
+    opacity: 1;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.right-cont svg, .right-cont img{
+    margin-right: 20px;
+    cursor: pointer;
+}
+.right-cont svg{
+    color: white;
+}
+
+.right-cont img{
+    max-width: 30px;
+}
+
+
+/* Movies section */
+
+.movies-section{
+    margin: 41px 0;
+}
+
+.movies-section-heanding{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: white;
+    cursor: pointer;
+    margin-top: 3%;
+}
+
+.Explore-nudge{
+    color: #54b9c5;
+    font-size: 12px;
+    display: none;
+}
+
+.movies-section-heanding:hover .Explore-nudge{
+    display: inline-block;
+}
+
+.movies-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.movies-item{
+    width: 245px;
+    object-fit: contain;
+    margin-right: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.movies-item:hover{
+    transform: scale(1.2);
+    transition: transform ease 350ms;
+
+}
+
+/* banner section */
+.banner-section{
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+    /* margin-top: 10px; */
+    position: relative;
+}
+
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    /* max-width: 100%; */
+    padding-top: 5px;
+}  
+
+.banner-title{
+    color: white;
+    font-size: 70px;
+    margin-top: 10%;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    max-width: 50%;
+}
+
+.banner-info{
+    margin-bottom: 14px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: white;
+}
+
+.banner-overview{
+    color: white;
+    line-height: 1.2;
+    font-size: 18px;
+    max-width: 50%;
+}
+
+.action-buttion-cont{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+.action-button{
+    border: none;
+    background-color: white;
+    padding: 8px 22px;
+    margin-right: 11px;
+    border-radius: 3px;
+    /* display: flex; */
+    align-items: center;
+    flex-direction: row;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.action-button:last-child{
+    background-color: rgba(109, 109, 110, 0.7);
+    color: white;
+}
+
+.banner-fade-button{
+    height: 120px;
+    background: linear-gradient(180deg,
+        transparent,
+        rgba(37,37,37,.63),
+        #141414
+    );
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Responsive css */
+
+@media (max-width:767px){
+    .main-nav{
+        display: none;
+    }
+    .banner-overview .banner-title{
+        max-width: 100%;
+    }
+}
